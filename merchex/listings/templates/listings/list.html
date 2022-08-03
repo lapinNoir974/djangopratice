@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Listing</title>
-</head>
-<body>
+	{% extends 'listings/base.html' %}
+
+	{% block content %}
 	<h1> Table titre</h1>
-		<p>Les titres disponnibles sont:</p>
-			<ul>
-				{% for listing in listings %}
-					<li>{{ listing.title}}</li>
-				{% endfor %}
-			</ul>
-</body>
-</html>
+	<p>Les titres disponnibles sont:</p>
+	<ul>
+		{% for listing in listings %}
+		<li>{{ listing.title}}</li>
+		{% endfor %}
+	</ul>
+	{% endblock %}

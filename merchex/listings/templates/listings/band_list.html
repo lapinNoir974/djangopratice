@@ -8,7 +8,8 @@
 
 		<ul>
 			{% for band in bands %}
-			<li>{{ band.name|upper}}</li>
+			<li><a href="{% url 'groupe-detail' band.id %}">{{ band.name }}</a></li>
 			{% endfor %}
+			
 		</ul>	
 	{% endblock %}

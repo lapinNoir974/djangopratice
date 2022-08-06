@@ -24,7 +24,7 @@ def band_create(request):
 			band = form.save()
 			# Redirige vers la page de details du groupe que venons de creer
 			#nous pouvons fournir les arugment du motif URL comme arguments à la fonction de redirection
-			return redirect('band-detail', band.id)
+			return redirect('groupe-detail', band.id)
 	else:
 		form = BandForm()
 	
@@ -86,7 +86,7 @@ def listing_update(request, id):
 			return redirect('list-detail', listing.id)
 	else:
 		form = ListForm(instance=listing)
-		
+
 	return render(request,
 			'listings/listing_update.html',
 			{'form': form})

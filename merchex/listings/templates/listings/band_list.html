@@ -4,11 +4,14 @@
 
 	{% block content %}
 	<h1>Groupes</h1>
-	<p>Mes groupes préférés sont :<p>
+	<a href="{% url 'band-create' %}">Creer un groupe</a>
 
 		<ul>
 			{% for band in bands %}
-			<li><a href="{% url 'groupe-detail' band.id %}">{{ band.name }}</a></li>
+			<li>
+				<a href="{% url 'groupe-detail' band.id %}">{{ band.name }}</a>
+				-<a href="{% url 'band-change' band.id %}">[Modifier]</a>
+			</li>
 			{% endfor %}
 			
 		</ul>	

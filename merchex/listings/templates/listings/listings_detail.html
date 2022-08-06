@@ -8,5 +8,7 @@
 		<li>Description: {{ listing.description}}</li>
 		{% if listing.band %}
 		<li>Groupe: {{ listing.band}}</li>
+	</ul>
 		{% endif %}
+<a href="{% url 'listing-list' %}">Retour au objet</a>
 {% endblock %}

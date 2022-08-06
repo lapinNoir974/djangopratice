@@ -1,11 +1,15 @@
 	{% extends 'listings/base.html' %}
 
 	{% block content %}
-	<h1> Table titre</h1>
+	<h1> Table titrfe</h1>
+	<a href="{% url 'list-create' %}">Creer un objet</a>
 	<p>Les titres disponnibles sont:</p>
 	<ul>
 		{% for listing in listings %}
-		<li><a href="{% url 'list-detail' listing.id %}">{{ listing.title}}<a></li>
+		<li>
+			<a href="{% url 'list-detail' listing.id %}">{{ listing.title}}<a>
+			-<a href="{% url 'listing-update' listing.id %}">[Update]</a>
+		</li>
 		{% endfor %}
 	</ul>
 	{% endblock %}

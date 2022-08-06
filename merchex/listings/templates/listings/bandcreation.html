@@ -1,0 +1,12 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+<h1>Creation de Groupe</h1>
+<!-- novalidate a cote de post enleve la validation des champs -->
+<form action="" method="post">
+	{% csrf_token%}
+	{{ form.as_p}}
+	<input type="submit" value="creer">
+</form>
+
+{% endblock %}

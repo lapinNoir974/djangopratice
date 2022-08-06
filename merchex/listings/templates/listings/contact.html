@@ -1,6 +1,11 @@
 {% extends 'listings/base.html' %}
 
 {% block content %}
-<h2>Coordonnées<h2>
-	<p>Nicolas HOARAU 0692862829<p>
-		{% endblock %}
+<p>Nous sommes là pour vous aider.<p>
+<form action="" method="post">
+{% csrf_token %}
+<!-- le .as-p apres forms met les champs en ligne --> 
+{{ form.as_p }} 
+<input type="submit" value="transmettre">
+</form>
+{% endblock %}

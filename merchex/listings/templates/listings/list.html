@@ -9,6 +9,7 @@
 		<li>
 			<a href="{% url 'list-detail' listing.id %}">{{ listing.title}}<a>
 			-<a href="{% url 'listing-update' listing.id %}">[Update]</a>
+			-<a href="{% url 'listing-delete' listing.id %}">[Delete]</a>
 		</li>
 		{% endfor %}
 	</ul>
